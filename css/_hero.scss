@@ -1,6 +1,21 @@
-.hero{
-    
+@import '_global.scss';
+@import '_mixings.scss';
 
+
+.hero{
+    background-color: $veryLightGray;
+
+    .container{
+
+        @include breakpoint-up(large){
+            display: flex;
+            align-items:center;
+            
+        }
+    }
+
+    
+    
     &__image{
         position: relative;
         background-image: url('../images/bg-intro-mobile.svg');
@@ -8,24 +23,94 @@
         background-repeat: no-repeat;
         min-height: 17.5rem;
         background-position: center center;
+        @include breakpoint-up(large){
+            
+            flex: 3;
+            height: 41rem;
+            order: 2;
+            background-image: none;
+            background-position: left center;
+        }
 
-    &::before{
-        content: "";
-        position: absolute;
-        background-image: url('../images/image-mockups.png');
-        background-size: 95%;
-        height: 100%;
-        background-repeat: no-repeat;
-        background-position: center bottom;
+        
+        &::after{
+            content: "";
+            position: absolute;
+            background-image: url('../images/image-mockups.png');
+            background-size: 95%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-position: center bottom;
+            width: 100%;
 
-        width: 100%;
+            @include breakpoint-up(large){
+                width: 120%;
+                height: 122%;
+                background-size: 94%;
+                 left: 49%;
+                background-position:center 150% ;
 
+
+            }
+
+        }
+        
+        &::before{
+            content: "";
+            position: absolute;
+            background-image: url('../images/bg-intro-desktop.svg');
+            background-size: 95%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-position: center bottom;
+            width: 100%;
+            
+            @include breakpoint-up(large){
+                width: 150%;
+                background-size: 138%;
+                background-repeat: no-repeat;
+                background-position: 0%,89%;
+                
+            }
+        }
+        
+        
+       
 
 
     }
 
+    &__text{
+        text-align: center;
 
 
+        h1{
+            font-weight: 300;
+            color: $darkBlue;
+            font-size: 2.7rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.15;
+            @include breakpoint-up(large){
+                font-size: $font-xlg;
+        
+            }
 
+
+        }
+
+        p{
+            line-height: 1.5;
+            margin-bottom:2.25rem ;
+        
+        }
+
+        @include breakpoint-up(large){
+            flex: 2;
+            order: 1;
+            text-align: left;
+    
+        }
+        
     }
+
 }

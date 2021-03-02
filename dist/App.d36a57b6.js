@@ -29844,7 +29844,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./..\\images\\bg-intro-mobile.svg":[["bg-intro-mobile.899c327f.svg","../images/bg-intro-mobile.svg"],"../images/bg-intro-mobile.svg"],"./..\\images\\image-mockups.png":[["image-mockups.1444eb4a.png","../images/image-mockups.png"],"../images/image-mockups.png"],"_css_loader":"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../images/logo.svg":[function(require,module,exports) {
+},{"./..\\images\\bg-intro-mobile.svg":[["bg-intro-mobile.899c327f.svg","../images/bg-intro-mobile.svg"],"../images/bg-intro-mobile.svg"],"./..\\images\\image-mockups.png":[["image-mockups.1444eb4a.png","../images/image-mockups.png"],"../images/image-mockups.png"],"./..\\images\\bg-intro-desktop.svg":[["bg-intro-desktop.829a6aa8.svg","../images/bg-intro-desktop.svg"],"../images/bg-intro-desktop.svg"],"_css_loader":"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../images/logo.svg":[function(require,module,exports) {
 module.exports = "/logo.f3865969.svg";
 },{}],"Nav.js":[function(require,module,exports) {
 "use strict";
@@ -29884,7 +29884,7 @@ var NavBar = function NavBar() {
 
 
   return /*#__PURE__*/_react.default.createElement("nav", {
-    className: "container flex flex-jc-sb flex-ai-c"
+    className: "container flex container--pall flex-jc-sb flex-ai-c"
   }, /*#__PURE__*/_react.default.createElement("a", {
     href: "",
     className: "header__logo"
@@ -29917,7 +29917,7 @@ var NavBar = function NavBar() {
     href: ""
   }, "Career")), /*#__PURE__*/_react.default.createElement("a", {
     href: "",
-    className: "button header__cta hide-for-mobile",
+    className: "button hide-for-mobile",
     type: "button"
   }, "Request Invite"));
 };
@@ -29932,31 +29932,29 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _react = _interopRequireWildcard(require("react"));
+var _react = _interopRequireDefault(require("react"));
 
 require("../css/style.scss/");
 
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
-var Toggle = function Toggle() {
-  return /*#__PURE__*/_react.default.createElement("ul", {
-    className: 'header__menu hide-for-mobile'
-  }, /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("a", {
+var Dropdown = function Dropdown() {
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: 'hide-for-desktop hide-for-mobile'
+  }, /*#__PURE__*/_react.default.createElement("a", {
     href: ""
-  }, "Home")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("a", {
+  }, "Home"), /*#__PURE__*/_react.default.createElement("a", {
     href: ""
-  }, "About")), /*#__PURE__*/_react.default.createElement("li", null, " ", /*#__PURE__*/_react.default.createElement("a", {
+  }, "About"), /*#__PURE__*/_react.default.createElement("a", {
     href: ""
-  }, "Contact")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("a", {
+  }, "Contact"), /*#__PURE__*/_react.default.createElement("a", {
     href: ""
-  }, "Blog")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("a", {
+  }, "Blog"), /*#__PURE__*/_react.default.createElement("a", {
     href: ""
-  }, "Careers")));
+  }, "Careers"));
 };
 
-var _default = Toggle;
+var _default = Dropdown;
 exports.default = _default;
 },{"react":"../node_modules/react/index.js","../css/style.scss/":"../css/style.scss"}],"Header.js":[function(require,module,exports) {
 "use strict";
@@ -29996,26 +29994,27 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-require("../css/style.scss/");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Hero = function Hero() {
   return /*#__PURE__*/_react.default.createElement("section", {
-    className: "hero"
+    className: "container hero"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "container"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "hero__image"
   }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "hero__text"
+    className: " contianer--pall hero__text"
   }, /*#__PURE__*/_react.default.createElement("h1", null, " Next generation digital banking"), /*#__PURE__*/_react.default.createElement("p", null, "Take your financial life online. Your Easybank account will be a one-stop-shop for spending, saving, budgeting, investing, and much more."), /*#__PURE__*/_react.default.createElement("a", {
     href: "",
-    className: "button hero__cta"
-  }, " Request Invite")));
+    className: "button",
+    type: "button"
+  }, "Request Invite"))));
 };
 
 var _default = Hero;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","../css/style.scss/":"../css/style.scss"}],"App.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js"}],"App.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -30061,7 +30060,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52599" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63807" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -1,21 +1,23 @@
-import React, { useState } from "react";
+import React from "react";
 import "../css/style.scss/";
-const Toggle=()=>{
+const Dropdown=()=>{
+
+
 
 
     return(
         
-        <ul className={'header__menu hide-for-mobile'}>
-            <li><a href="">Home</a></li>
-            <li><a href="">About</a></li>
-            <li> <a href="">Contact</a></li>
-            <li><a href="">Blog</a></li>
-            <li><a href="">Careers</a></li>
+        <div className={ 'hide-for-desktop hide-for-mobile'}>
+            <a href="">Home</a>
+            <a href="">About</a>
+             <a href="">Contact</a>
+            <a href="">Blog</a>
+            <a href="">Careers</a>
             
 
-        </ul>
+        </div>
 
     )
 }
 
-export default Toggle
+export default Dropdown

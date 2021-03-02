@@ -7,7 +7,7 @@ const NavBar = ()=>{
     //const [scrol, setScroll] = useState('noscroll')
 
     return(
-        <nav className="container flex flex-jc-sb flex-ai-c">
+        <nav className="container flex container--pall flex-jc-sb flex-ai-c">
             <a href="" className="header__logo">
         
                 <img src={logo} alt="header-Img"/>
@@ -24,7 +24,7 @@ const NavBar = ()=>{
                 <a href="">Home</a><a href="">About</a><a href="">Contact</a><a href="">Blog</a><a href="">Career</a>
                 
             </div>
-            <a href="" className="button header__cta hide-for-mobile" type="button" >Request Invite</a>
+            <a href="" className="button hide-for-mobile" type="button" >Request Invite</a>
                     
         </nav>
         
